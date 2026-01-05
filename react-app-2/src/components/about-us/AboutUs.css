@@ -1,0 +1,22 @@
+/* About Us page styles */
+.about-us-ctn{margin-top:12vh;padding:40px 4%;color:#fff}
+.about-us-ctn .hero{max-width:900px;margin:0 auto 30px;text-align:center}
+.about-us-ctn .eyebrow{letter-spacing:6px;color:#ddd;margin-bottom:8px}
+.about-us-ctn .lead{color:#ccc;font-size:18px;line-height:1.6;max-width:760px;margin:0 auto}
+
+.row{display:flex;align-items:center;gap:30px;max-width:1100px;margin:36px auto}
+.row.reverse{flex-direction:row-reverse}
+.row .media{flex:1}
+.row .media img{width:100%;height:320px;object-fit:cover;border-radius:8px}
+.row .text{flex:1;display:flex;align-items:center;justify-content:center}
+.row .text.big h1{font-size:84px;line-height:0.9;margin:0;letter-spacing:4px}
+
+.story{max-width:900px;margin:40px auto;color:#ddd}
+.story h3{color:#fff;margin-bottom:8px}
+
+@media(max-width:900px){
+	.row{flex-direction:column}
+	.row .media img{height:220px}
+	.row .text.big h1{font-size:56px}
+	.about-us-ctn{padding:28px 6%}
+}

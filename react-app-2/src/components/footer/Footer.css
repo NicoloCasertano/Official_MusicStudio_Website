@@ -1,0 +1,102 @@
+footer ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: margin-right 0.3s ease;
+}
+
+footer.has-user ul {
+    margin-right: 20%;
+}
+
+footer ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer{
+    /* width: calc(100% - 60px); */
+    width: 100%;
+    padding: 10px 30px;
+    position: fixed;
+    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.44);
+}
+
+.footer-user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.footer-profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-profile-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-username {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.footer-logout-btn {
+    padding: 4px 12px;
+    background-color: rgba(2, 2, 2, 0.697);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-color: rgba(255, 255, 255, 0.436);
+    border-width: 0.1px;
+}
+
+.footer-logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.764);
+    transform: scale(1.05);
+}
+.icn-s:hover {
+    color: rgb(103, 210, 82);
+    transition-duration: 0.2s;
+}
+.icn-i:hover {
+    color: #e534ad;
+    transition-duration: 0.2s;
+}
+.icn-w:hover {
+    color: rgb(140, 243, 119);
+    transition-duration: 0.2s;
+}
+.icn-m:hover {
+    color: rgb(253, 37, 37);
+    transition-duration: 0.2s;
+}

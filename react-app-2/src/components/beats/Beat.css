@@ -1,0 +1,7 @@
+.beat-card { background: #fff; color: #111; padding: 12px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 12px; }
+.beat-info { display:flex; justify-content:space-between; align-items:center; }
+.beat-info h4 { margin: 0;}
+.price { font-weight: 700; }
+.beat-actions { margin-top: 8px; }
+.beat-actions button { padding: 8px 12px; border-radius:6px; border:none; background:#1db954; color:#fff; cursor:pointer; }
+.beat-actions button[disabled] { background: #ccc; cursor: not-allowed; }

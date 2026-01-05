@@ -1,0 +1,25 @@
+.single-beat{color:#fff;margin-top:12vh;padding:48px 4%}
+.single-beat .content{display:flex;gap:40px;align-items:flex-start}
+.single-beat .left{flex:1;display:flex;flex-direction:column;gap:12px}
+.single-beat h1{font-size:32px;margin-bottom:6px}
+.single-beat .desc{color:#ccc;margin-bottom:12px;line-height:1.6}
+.single-beat .price{margin:12px 0;font-size:20px}
+.single-beat .actions{display:flex;gap:12px}
+.single-beat .actions .btn{padding:10px 18px}
+.single-beat .right{width:380px;display:flex;flex-direction:column;align-items:center}
+.single-beat .right img{width:100%;height:auto;object-fit:contain;border-radius:6px}
+.single-beat .price-tag{margin-top:10px;background:transparent;color:#fff;padding:8px 12px;border-radius:6px}
+
+.beat-info{display:flex;gap:12px;align-items:center;margin:12px 0}
+.badge{background:#6200ea;padding:5px 10px;border-radius:6px;font-size:12px;font-weight:600}
+.info-item{background:rgba(255,255,255,0.05);padding:5px 10px;border-radius:6px;font-size:12px}
+.audio-player{margin:20px 0;padding:20px;background:rgba(255,255,255,0.03);border-radius:8px}
+.single-beat .more{margin-top:20px}
+.single-beat .more h3{font-size:16px;margin-bottom:8px}
+.single-beat .more p{font-size:13px;line-height:1.5;margin-bottom:6px;color:#ccc}
+
+@media(max-width:1000px){
+  .single-beat{padding:24px;margin-top:10vh}
+  .single-beat .content{flex-direction:column}
+  .single-beat .right{width:100%}
+}

@@ -1,0 +1,92 @@
+.basket{padding:40px;color:#fff;margin-top:5vh}
+.auth-warning{background:rgba(255,193,7,0.15);border:1px solid rgba(255,193,7,0.5);padding:12px;border-radius:8px;margin-bottom:20px;text-align:center}
+.auth-warning p{margin:0;color:#ffc107;font-weight:500}
+.items{display:flex;flex-direction:column;gap:12px}
+.item{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
+.item img{width:84px;height:84px;object-fit:cover;border-radius:6px}
+.i-mid{flex:1}
+.i-right{text-align:right}
+.i-right .btn{margin-top:10px}
+.summary{margin-top:20px;font-size:20px;font-weight:600;text-align:right}
+.btn{background:#fff;color:#000;padding:8px 12px;border-radius:6px;border:0;cursor:pointer;font-weight:500;transition:all 0.2s ease}
+.btn:hover{opacity:0.9}
+.btn.alt{background:transparent;border:1px solid rgba(255, 255, 255, 0.298); color: #ffffff99;}
+.btn.alt:hover{background:rgba(255,255,255,0.05)}
+
+/* Payment Section */
+.payment-section{margin-top:20px;padding:20px;background:rgba(255,255,255,0.02);border-radius:12px}
+.payment-section h3{margin:0 0 16px 0;font-size:18px;font-weight:600;color:#fff}
+.payment-buttons{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:12px;}
+
+.payment-btn{
+  background:#000;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.3);
+  padding:16px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-size:15px;
+  font-weight:500;
+  transition:all 0.3s ease;
+  position:relative;
+}
+
+.payment-btn:hover{
+  background:#1a1a1a;
+  border-color:rgba(255,255,255,0.5);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+
+.payment-btn.selected{
+  background:#fff;
+  color:#000;
+  border-color:#fff;
+}
+
+.payment-btn.selected .payment-icon{
+  stroke:#000;
+}
+
+.payment-icon{
+  width:24px;
+  height:24px;
+  stroke-width:2;
+}
+
+/* Checkout Actions */
+.checkout-actions{
+  margin-top:16px;
+  display:flex;
+  gap:12px;
+  justify-content:flex-end;
+}
+
+.checkout-btn{
+  background:#fff;
+  color:#000;
+  padding:12px 32px;
+  font-size:16px;
+  font-weight:600;
+}
+
+/* Invoices */
+.invoices{margin-top:30px;padding:20px;background:rgba(255,255,255,0.02);border-radius:12px}
+.invoices h2{margin:0 0 10px 0;font-size:20px;color:#fff}
+.payment-note{color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:15px}
+.invoice-card{background:rgba(255,255,255,0.05);padding:16px;border-radius:8px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.1)}
+.invoice-card .who{font-weight:700;font-size:16px;margin-bottom:8px}
+.invoice-card div{margin:4px 0}
+.invoice-actions{margin-top:15px}
+.invoice-actions .btn{width:100%;padding:14px;font-size:15px;font-weight:600}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-buttons{grid-template-columns:1fr}
+  .checkout-actions{flex-direction:column}
+  .checkout-btn, .btn.alt{width:100%}
+}

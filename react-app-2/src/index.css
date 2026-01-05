@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+body{
+    background-color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Zalando Sans Expanded", sans-serif;
+    font-optical-sizing: auto;
+}
+a{
+    cursor: pointer;
+    color: inherit;
+    line-height: 1;
+}
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
