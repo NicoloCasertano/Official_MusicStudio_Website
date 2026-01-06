@@ -1,7 +1,7 @@
 import React from 'react'
 import Beat from './Beat'
-import '/Users/mac/Dev_N/React/react-app-2/src/components/beats/Beats.css'
-import beats from '/Users/mac/Dev_N/React/react-app-2/src/data/beats'
+import './Beats.css'
+import beats from '../../data/beats'
 
 export default function Beats() {
   return (

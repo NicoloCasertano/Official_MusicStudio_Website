@@ -37,6 +37,8 @@ export default function SlideMenu({ onLoginChange }) {
       localStorage.setItem('sa_user', JSON.stringify(res))
       onLoginChange && onLoginChange(res)
       setShowRegister(false)
+      // Refresh the page to update all components
+      window.location.reload()
     } catch (err) {
       console.error('login failed', err)
       alert('Login failed: check email/password')
@@ -52,6 +54,8 @@ export default function SlideMenu({ onLoginChange }) {
       onLoginChange && onLoginChange(res)
       setShowRegister(false)
       alert('✅ Successful Registration! Welcome to NoSaintz!')
+      // Refresh the page to update all components
+      window.location.reload()
     } catch (err) {
       console.error('register failed', err)
       alert('❌ Registration failed: ' + err.message)

@@ -4,7 +4,7 @@
 .single-beat h1{font-size:32px;margin-bottom:6px}
 .single-beat .desc{color:#ccc;margin-bottom:12px;line-height:1.6}
 .single-beat .price{margin:12px 0;font-size:20px}
-.single-beat .actions{display:flex;gap:12px}
+.single-beat .actions{display:flex;gap:12px; margin-top: -4vh;}
 .single-beat .actions .btn{padding:10px 18px}
 .single-beat .right{width:380px;display:flex;flex-direction:column;align-items:center}
 .single-beat .right img{width:100%;height:auto;object-fit:contain;border-radius:6px}
@@ -13,7 +13,7 @@
 .beat-info{display:flex;gap:12px;align-items:center;margin:12px 0}
 .badge{background:#6200ea;padding:5px 10px;border-radius:6px;font-size:12px;font-weight:600}
 .info-item{background:rgba(255,255,255,0.05);padding:5px 10px;border-radius:6px;font-size:12px}
-.audio-player{margin:20px 0;padding:20px;background:rgba(255,255,255,0.03);border-radius:8px}
+.audio-player{background:rgba(255, 255, 255, 0);border-radius:8px; margin-bottom: 1rem;}
 .single-beat .more{margin-top:20px}
 .single-beat .more h3{font-size:16px;margin-bottom:8px}
 .single-beat .more p{font-size:13px;line-height:1.5;margin-bottom:6px;color:#ccc}

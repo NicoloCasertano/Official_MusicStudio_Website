@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Calendar.css'
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
-import calendarIcon from '../../assets/calendar_icn.png'
+const calendarIcon = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/calendar_icn.png'
 import { FaMicrophone } from 'react-icons/fa6'
 
 // Vite env vars: VITE_GOOGLE_API_KEY and VITE_GOOGLE_CALENDAR_ID

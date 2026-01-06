@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './BeatsHome.css'
-import { Link } from 'react-router-dom'
+import Beat from '../beats/Beat'
 import { getAvailableBeats } from '../../services/api'
 
 const BeatsHome = () => {
@@ -28,14 +28,8 @@ const BeatsHome = () => {
                         {Array.from({ length: Math.min(maxVisible, beats.length) }).map((_, i) => {
                             const beat = beats[(start + i) % beats.length];
                             return (
-                                <div className='slide-item' key={beat.id || i} style={{maxWidth: beats.length === 1 ? '300px' : 'auto'}}>
-                                    <Link to={`/beats/${beat.id}`}>
-                                      <img src={`/src/assets/${beat.image}`} alt={beat.title} className='img-t'/>
-                                      <div style={{textAlign:'center', color:'#fff', marginTop:'10px'}}>
-                                        <strong>{beat.title}</strong>
-                                        <div style={{fontSize:'14px', opacity:0.8}}>{beat.genre}</div>
-                                      </div>
-                                    </Link>
+                                <div className='slide-item' key={beat.id || i}>
+                                    <Beat beat={beat} />
                                 </div>
                             );
                         })}

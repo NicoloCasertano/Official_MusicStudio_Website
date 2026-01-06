@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5713/api'
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080/api'
 
 async function handleJsonResponse(res) {
   if (!res.ok) {

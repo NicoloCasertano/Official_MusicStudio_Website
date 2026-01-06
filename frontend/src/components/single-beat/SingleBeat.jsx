@@ -45,11 +45,10 @@ const SingleBeat = () => {
                     
                     {beat.audioPath && (
                       <div className='audio-player'>
-                        <audio controls style={{width:'100%'}}>
+                        <audio controls controlsList="nodownload" style={{width:'100%'}} className='audio-player'>
                           <source src={`${api.API_BASE.replace('/api', '')}/api/beats/audio/${encodeURIComponent(beat.audioPath)}`} type="audio/mpeg" />
                           Your browser does not support the audio element.
                         </audio>
-                        <p style={{fontSize:'12px', opacity:0.7, marginTop:'8px'}}>40 second preview</p>
                       </div>
                     )}
 
@@ -60,7 +59,7 @@ const SingleBeat = () => {
                         <h3>Exclusive Rights</h3>
                         <p><strong>This beat is sold with EXCLUSIVE RIGHTS.</strong></p>
                         <p>Once purchased, the beat will be removed from our store and you will own full exclusive rights.</p>
-                        <p>High-quality WAV file delivered instantly after purchase.</p>
+                        <p>High-quality WAV file delivered instantly after purchase.</p><br /><br />
                     </div>
                 </div>
                 <div className='right'>

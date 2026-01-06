@@ -5,6 +5,9 @@ import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 import { PAYMENT_CONFIG, calculateSplit } from '../../config/payment'
 import { purchaseBeatExclusive } from '../../services/api'
+import applePayIcon from '../../assets/apple_icn.png'
+import googlePayIcon from '../../assets/googlePay_icn.png'
+import payPalIcon from '../../assets/payPal_icn.svg'
 
 function downloadText(filename, text){
   const blob = new Blob([text], { type: 'text/plain' })
@@ -162,9 +165,7 @@ ${beatPurchases.length > 0 ? '\n⚠️ Beats purchased with EXCLUSIVE RIGHTS.\nY
                 className={`payment-btn ${selectedPayment === 'applepay' ? 'selected' : ''}`}
                 onClick={() => handlePaymentSelect('applepay')}
               >
-                <svg className='payment-icon' viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-                </svg>
+                <img src={applePayIcon} alt="Apple Pay" className='payment-icon' />
                 Apple Pay
               </button>
 
@@ -172,10 +173,7 @@ ${beatPurchases.length > 0 ? '\n⚠️ Beats purchased with EXCLUSIVE RIGHTS.\nY
                 className={`payment-btn ${selectedPayment === 'googlepay' ? 'selected' : ''}`}
                 onClick={() => handlePaymentSelect('googlepay')}
               >
-                <svg className='payment-icon' viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                  <text x="12" y="14" textAnchor="middle" fontSize="8" fill="currentColor" fontWeight="bold">G</text>
-                </svg>
+                <img src={googlePayIcon} alt="Google Pay" className='payment-icon' />
                 Google Pay
               </button>
 
@@ -183,9 +181,7 @@ ${beatPurchases.length > 0 ? '\n⚠️ Beats purchased with EXCLUSIVE RIGHTS.\nY
                 className={`payment-btn ${selectedPayment === 'paypal' ? 'selected' : ''}`}
                 onClick={() => handlePaymentSelect('paypal')}
               >
-                <svg className='payment-icon' viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
-                </svg>
+                <img src={payPalIcon} alt="PayPal" className='payment-icon' />
                 PayPal
               </button>
 

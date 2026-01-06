@@ -3,6 +3,7 @@ import './BeatsPage.css'
 import { Link } from 'react-router-dom'
 import Footer from '../footer/Footer'
 import Navbar from '../navbar/Navbar'
+import Beat from '../beats/Beat'
 import { getAvailableBeats } from '../../services/api'
 
 const BeatsPage = () => {
@@ -29,21 +30,7 @@ const BeatsPage = () => {
 			) : (
 				<div className='beats-grid'>
 					{beats.map(beat => (
-						<div className='beat-card' key={beat.id}>
-							<Link to={`/beats/${beat.id}`}>
-								<img src={`/src/assets/${beat.image}`} alt={beat.title} />
-							</Link>
-							<div className='info'>
-								<div className='title'>{beat.title}</div>
-								<div className='genre'>{beat.genre}</div>
-								<div className='details'>BPM: {beat.bpm} | Key: {beat.keySignature}</div>
-								<div className='price'>€{beat.price.toFixed(2)}</div>
-								<div className='links'>
-									<Link to={`/beats/${beat.id}`}>View</Link>
-									<Link to="/basket">Basket</Link>
-								</div>
-							</div>
-						</div>
+						<Beat beat={beat} key={beat.id} />
 					))}
 				</div>
 			)}

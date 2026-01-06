@@ -18,6 +18,12 @@ footer ul li{
     margin: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: inherit;
 }
 footer{
     /* width: calc(100% - 60px); */

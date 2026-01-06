@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './Navbar.css'
-import img from '../../assets/IMG_0423.PNG'
+const img = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/IMG_0423.PNG'
 import { Link } from 'react-router-dom'
 import { FaBasketShopping, FaBars } from 'react-icons/fa6'
 import { MenuContext } from '../../context/MenuContext'

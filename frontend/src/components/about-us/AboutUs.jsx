@@ -2,9 +2,9 @@ import React from 'react'
 import './AboutUs.css'
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
-import imgLeft from '../../assets/studio-img1.jpeg'
-import imgRight from '../../assets/studio-img2.jpeg'
-import imgAlt from '../../assets/studio-img3.jpeg'
+const imgLeft = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/studio-img1.jpeg'
+const imgRight = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/studio-img2.jpeg'
+const imgAlt = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/studio-img3.jpeg'
 
 const AboutUs = () => {
   return (
