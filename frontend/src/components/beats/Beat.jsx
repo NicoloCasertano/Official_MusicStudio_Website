@@ -4,7 +4,42 @@ import { CartContext } from '../../context/CartContext'
 import { FaPlay, FaPause } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 
-const backgroundImage = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/IMG_0357.JPG'
+// Import all cover images for dynamic selection
+import bCover1 from '../../assets/bCover_img1.jpg'
+import bCover2 from '../../assets/bCover_img2.jpg'
+import bCover3 from '../../assets/bCover_img3.jpg'
+import bCover4 from '../../assets/bCover_img4.jpg'
+import bCover5 from '../../assets/bCover_img5.jpg'
+import bCover6 from '../../assets/bCover_img6.jpg'
+import bCover7 from '../../assets/bCover_img7.jpg'
+import bCover8 from '../../assets/bCover_img8.jpg'
+import bCover9 from '../../assets/bCover_img9.jpg'
+import bCover10 from '../../assets/bCover_img10.jpg'
+import bCover11 from '../../assets/bCover_img11.jpg'
+import bCover12 from '../../assets/bCover_img12.jpg'
+import bCover13 from '../../assets/bCover_img13.jpg'
+import bCover14 from '../../assets/bCover_img14.jpg'
+
+// Map image filenames to imported assets
+const coverImageMap = {
+  'bCover_img1.jpg': bCover1,
+  'bCover_img2.jpg': bCover2,
+  'bCover_img3.jpg': bCover3,
+  'bCover_img4.jpg': bCover4,
+  'bCover_img5.jpg': bCover5,
+  'bCover_img6.jpg': bCover6,
+  'bCover_img7.jpg': bCover7,
+  'bCover_img8.jpg': bCover8,
+  'bCover_img9.jpg': bCover9,
+  'bCover_img10.jpg': bCover10,
+  'bCover_img11.jpg': bCover11,
+  'bCover_img12.jpg': bCover12,
+  'bCover_img13.jpg': bCover13,
+  'bCover_img14.jpg': bCover14,
+}
+
+// Fallback image
+const defaultCoverImage = bCover1
 
 // Global variable to track currently playing audio
 let currentlyPlayingAudio = null
@@ -16,6 +51,14 @@ export default function Beat({ beat }) {
   const [duration, setDuration] = useState(0)
   const [user, setUser] = useState(null)
   const playTimeoutRef = useRef(null)
+  
+  // Get the cover image for this beat
+  const getCoverImage = () => {
+    if (beat.image && coverImageMap[beat.image]) {
+      return coverImageMap[beat.image]
+    }
+    return defaultCoverImage
+  }
 
   // Load user from localStorage
   useEffect(() => {
@@ -154,8 +197,8 @@ export default function Beat({ beat }) {
     <article className="beat-card" onClick={handleCardClick} style={{ 
       borderLeft: `4px solid ${getBeatColor()}`,
       backgroundImage: user 
-        ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${backgroundImage})`
-        : `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(${backgroundImage})`,
+        ? `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${getCoverImage()})`
+        : `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(${getCoverImage()})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       cursor: 'pointer'

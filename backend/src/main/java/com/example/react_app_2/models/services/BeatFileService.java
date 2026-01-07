@@ -7,8 +7,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,16 +24,66 @@ public class BeatFileService {
 
     private final BeatRepo beatRepo;
     private static final String AUDIO_FOLDER = "src/main/resources/audio-beats";
-    private static final String BEAT_IMAGE = "IMG_0357.JPG";
-    private static final List<String> GENRES = Arrays.asList("Trap", "Hip-Hop", "R&B", "Drill", "Lo-Fi", "Boom Bap");
+    private static final int COVER_IMAGE_COUNT = 14; // bCover_img1.jpg to bCover_img14.jpg
+    private static final int NO_REPEAT_THRESHOLD = 10; // Allow repeats only after 10 beats
+    
+    // All available genres (matching frontend genreColors)
+    private static final List<String> ALL_GENRES = Arrays.asList(
+        "Trap", "Drill", "Hip-Hop", "Rap", "RnB", "Pop", "Afrobeat", "Dancehall",
+        "Reggaeton", "Electronic", "House", "Techno", "EDM", "Chill", "Lofi",
+        "Ambient", "Rock", "Indie", "Alternative"
+    );
+    
+    private final Random random = new Random();
 
     public BeatFileService(BeatRepo beatRepo) {
         this.beatRepo = beatRepo;
     }
 
+    /**
+     * Get a random cover image filename from bCover_img1.jpg to bCover_img14.jpg
+     * If there are fewer than 10 beats, it ensures no image is repeated.
+     * After 10 beats, repeats are allowed.
+     */
+    private String getRandomCoverImage() {
+        List<Beat> existingBeats = beatRepo.findAll();
+        
+        // If we have 10 or more beats, allow any random image (repeats allowed)
+        if (existingBeats.size() >= NO_REPEAT_THRESHOLD) {
+            int imageNumber = random.nextInt(COVER_IMAGE_COUNT) + 1; // 1 to 14
+            return "bCover_img" + imageNumber + ".jpg";
+        }
+        
+        // Get the set of images already in use
+        Set<String> usedImages = existingBeats.stream()
+                .map(Beat::getImage)
+                .filter(img -> img != null)
+                .collect(Collectors.toSet());
+        
+        // Build list of available (unused) images
+        List<String> availableImages = new ArrayList<>();
+        for (int i = 1; i <= COVER_IMAGE_COUNT; i++) {
+            String imageName = "bCover_img" + i + ".jpg";
+            if (!usedImages.contains(imageName)) {
+                availableImages.add(imageName);
+            }
+        }
+        
+        // If all images are used (shouldn't happen with 14 images and < 10 beats), pick randomly
+        if (availableImages.isEmpty()) {
+            int imageNumber = random.nextInt(COVER_IMAGE_COUNT) + 1;
+            return "bCover_img" + imageNumber + ".jpg";
+        }
+        
+        // Pick a random image from available ones
+        return availableImages.get(random.nextInt(availableImages.size()));
+    }
+
     public void syncBeatsFromFolder() {
         File folder = new File(AUDIO_FOLDER);
         if (!folder.exists() || !folder.isDirectory()) {
+            // If folder doesn't exist, delete all beats from database
+            beatRepo.deleteAll();
             return;
         }
 
@@ -41,10 +93,31 @@ public class BeatFileService {
             name.toLowerCase().endsWith(".m4a")
         );
 
+        // Get set of current audio filenames in folder
+        Set<String> currentAudioFiles = new HashSet<>();
+        if (audioFiles != null) {
+            for (File f : audioFiles) {
+                currentAudioFiles.add(f.getName());
+            }
+        }
+
+        // Delete beats whose audio files no longer exist in the folder
+        List<Beat> allBeats = beatRepo.findAll();
+        for (Beat beat : allBeats) {
+            String audioPath = beat.getAudioPath();
+            if (audioPath != null && !currentAudioFiles.contains(audioPath)) {
+                // Audio file was removed, delete the beat from database
+                System.out.println("Audio file removed, deleting beat: " + beat.getTitle() + " (" + audioPath + ")");
+                beatRepo.delete(beat);
+            }
+        }
+
+        // If no audio files, we're done
         if (audioFiles == null || audioFiles.length == 0) {
             return;
         }
 
+        // Add new beats for audio files that don't exist in database
         for (File audioFile : audioFiles) {
             String filename = audioFile.getName();
             String filenameWithoutExt = filename.substring(0, filename.lastIndexOf('.'));
@@ -81,7 +154,8 @@ public class BeatFileService {
                 beat.setAudioPath(filename);
                 beat.setPrice(27.0);
                 beat.setSold(false);
-                beat.setImage(BEAT_IMAGE);
+                // Assign a random cover image from bCover_img1-14
+                beat.setImage(getRandomCoverImage());
                 
                 beatRepo.save(beat);
             }
@@ -140,7 +214,37 @@ public class BeatFileService {
         }
     }
 
+    /**
+     * Get a random genre from the available genres list.
+     * If there are fewer than 10 beats, it ensures no genre is repeated.
+     * After 10 beats, repeats are allowed.
+     */
     private String getRandomGenre() {
-        return GENRES.get(new Random().nextInt(GENRES.size()));
+        List<Beat> existingBeats = beatRepo.findAll();
+        
+        // If we have 10 or more beats, allow any random genre (repeats allowed)
+        if (existingBeats.size() >= NO_REPEAT_THRESHOLD) {
+            return ALL_GENRES.get(random.nextInt(ALL_GENRES.size()));
+        }
+        
+        // Get the set of genres already in use (case-insensitive comparison)
+        Set<String> usedGenres = existingBeats.stream()
+                .map(Beat::getGenre)
+                .filter(genre -> genre != null)
+                .map(String::toLowerCase)
+                .collect(Collectors.toSet());
+        
+        // Build list of available (unused) genres
+        List<String> availableGenres = ALL_GENRES.stream()
+                .filter(genre -> !usedGenres.contains(genre.toLowerCase()))
+                .collect(Collectors.toList());
+        
+        // If all genres are used, pick randomly from all
+        if (availableGenres.isEmpty()) {
+            return ALL_GENRES.get(random.nextInt(ALL_GENRES.size()));
+        }
+        
+        // Pick a random genre from available ones
+        return availableGenres.get(random.nextInt(availableGenres.size()));
     }
 }
