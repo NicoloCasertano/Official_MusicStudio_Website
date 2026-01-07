@@ -7,3 +7,39 @@
     margin-top: -40vh;
     margin-bottom: 0;
 }
+
+/* Desktop: show desktop image, hide mobile image */
+.hero-desktop {
+    display: block;
+}
+
+.hero-mobile {
+    display: none;
+}
+
+/* ============== MOBILE STYLES ============== */
+@media screen and (max-width: 768px) {
+    /* Mobile: hide desktop image, show mobile image */
+    .hero-desktop {
+        display: none;
+    }
+    
+    .hero-mobile {
+        display: block;
+        margin-top: 60px; /* Account for fixed navbar height */
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 50vh;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-mobile {
+        margin-top: 55px;
+        margin-bottom: 20px;
+        max-height: 45vh;
+    }
+}

@@ -5,9 +5,9 @@ import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 import { PAYMENT_CONFIG, calculateSplit } from '../../config/payment'
 import { purchaseBeatExclusive } from '../../services/api'
-import applePayIcon from '../../assets/apple_icn.png'
-import googlePayIcon from '../../assets/googlePay_icn.png'
-import payPalIcon from '../../assets/payPal_icn.svg'
+const applePayIcon = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/apple_icn.png'
+const googlePayIcon = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/googlePay_icn.png'
+const payPalIcon = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/payPal_icn.svg'
 
 function downloadText(filename, text){
   const blob = new Blob([text], { type: 'text/plain' })

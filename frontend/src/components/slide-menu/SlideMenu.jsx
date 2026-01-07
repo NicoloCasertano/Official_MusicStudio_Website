@@ -7,14 +7,47 @@ import { useNavigate } from 'react-router-dom'
 export default function SlideMenu({ onLoginChange }) {
   const { open, setOpen } = useContext(MenuContext)
   const [isOpen, setIsOpen] = useState(!!open)
-  // Do not auto-login from localStorage on page entry.
-  // User must explicitly log in or register to become "logged in".
-  const [user, setUser] = useState(null)
+  // Initialize user from localStorage if exists
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('sa_user')
+    if (savedUser) {
+      try {
+        return JSON.parse(savedUser)
+      } catch (e) {
+        return null
+      }
+    }
+    return null
+  })
   const [form, setForm] = useState({ name: '', email: '', password: '', image: '' })
   const [showRegister, setShowRegister] = useState(false)
   const navigate = useNavigate()
 
   useEffect(() => setIsOpen(!!open), [open])
+  
+  // Listen for user changes from other components
+  useEffect(() => {
+    const checkUser = () => {
+      const savedUser = localStorage.getItem('sa_user')
+      if (savedUser) {
+        try {
+          setUser(JSON.parse(savedUser))
+        } catch (e) {
+          setUser(null)
+        }
+      } else {
+        setUser(null)
+      }
+    }
+    
+    window.addEventListener('storage', checkUser)
+    window.addEventListener('userChanged', checkUser)
+    
+    return () => {
+      window.removeEventListener('storage', checkUser)
+      window.removeEventListener('userChanged', checkUser)
+    }
+  }, [])
 
   useEffect(() => {
     if (user) setForm({ 

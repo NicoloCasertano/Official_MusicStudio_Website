@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 body{
     background-color: black;
+    overflow-x: hidden;
 }
 *{
     margin: 0;
@@ -17,4 +18,27 @@ a{
 .container {
     padding-left: 5%;
     padding-right: 5%;
+}
+
+/* ============== GLOBAL MOBILE STYLES ============== */
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    
+    body {
+        font-size: 13px;
+    }
 }

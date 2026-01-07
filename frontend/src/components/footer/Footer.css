@@ -106,3 +106,63 @@ footer{
     color: rgb(253, 37, 37);
     transition-duration: 0.2s;
 }
+
+/* ============== MOBILE STYLES ============== */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 8px 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    footer ul {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+        margin-right: auto !important; /* Override has-user margin */
+    }
+    
+    footer ul li {
+        margin: 4px 8px;
+        font-size: 14px;
+    }
+    
+    footer ul li a {
+        font-size: 14px;
+    }
+    
+    .icn-m {
+        font-size: 14px !important;
+    }
+    
+    footer.has-user ul {
+        margin-right: auto;
+    }
+    
+    /* HIDE user profile section on mobile - it's shown in navbar instead */
+    .footer-user-profile {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 6px 8px;
+    }
+    
+    footer ul li {
+        margin: 3px 6px;
+        font-size: 12px;
+    }
+    
+    footer ul li a {
+        font-size: 12px;
+    }
+    
+    .icn-m {
+        font-size: 12px !important;
+    }
+}

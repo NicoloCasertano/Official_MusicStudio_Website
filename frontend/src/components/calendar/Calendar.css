@@ -329,3 +329,269 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(128, 128, 128, 0.3);
 }
+
+/* ============== MOBILE STYLES ============== */
+@media screen and (max-width: 768px) {
+  .calendar-page {
+    margin: 0;
+    padding: 20px 10px;
+    margin-top: 60px;
+    padding-bottom: 100px;
+  }
+  
+  .calendar-page h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-page .muted {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .days-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin: 12px auto;
+    max-width: 100%;
+  }
+  
+  .day {
+    padding: 10px 4px;
+    border-radius: 6px;
+    min-height: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation; /* Better touch response */
+  }
+  
+  .day .dow {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .day .dom {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  
+  .day.selected {
+    outline: 2px solid #fff;
+    background: rgba(255,255,255,0.15);
+  }
+  
+  .availability-indicator {
+    width: 8px;
+    height: 8px;
+    top: 3px;
+    right: 3px;
+  }
+  
+  .legend {
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 15px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .legend .dot {
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+  }
+  
+  .booking-panel {
+    margin: 15px auto 80px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .selected-info {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .selected-info > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+  }
+  
+  .selected-info select {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    margin-top: 5px;
+    position: relative;
+    -webkit-appearance: menulist;
+    appearance: menulist;
+    font-size: 16px; /* Prevents iOS zoom */
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+  }
+  
+  /* Force dropdown to render in document flow */
+  .selected-info select:focus {
+    outline: none;
+    border-color: #808080;
+  }
+  
+  .selected-info select option {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .booking-form label {
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+  }
+  
+  .booking-form input,
+  .booking-form select,
+  .booking-form textarea {
+    padding: 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .booking-form button {
+    padding: 14px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  .modal-content {
+    width: 95%;
+    max-height: 85vh;
+    margin: 10px;
+  }
+  
+  .modal-header {
+    padding: 1rem;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .modal-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .booking-details {
+    padding: 1rem;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 4px;
+    padding: 0.6rem 0;
+  }
+  
+  .detail-label {
+    font-size: 0.85rem;
+  }
+  
+  .detail-value {
+    text-align: left;
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+  
+  .next-steps {
+    padding: 1rem;
+  }
+  
+  .next-steps h4 {
+    font-size: 0.95rem;
+  }
+  
+  .next-steps li {
+    font-size: 0.9rem;
+  }
+  
+  .modal-footer {
+    padding: 1rem;
+  }
+  
+  .btn-primary {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calendar-page {
+    margin-top: 55px;
+    padding: 15px 8px;
+    padding-bottom: 90px;
+  }
+  
+  .calendar-page h1 {
+    font-size: 20px;
+  }
+  
+  .calendar-page .muted {
+    font-size: 12px;
+  }
+  
+  .days-grid {
+    gap: 3px;
+  }
+  
+  .day {
+    padding: 8px 2px;
+    min-height: 50px;
+    border-radius: 5px;
+  }
+  
+  .day .dow {
+    font-size: 8px;
+  }
+  
+  .day .dom {
+    font-size: 14px;
+  }
+  
+  .availability-indicator {
+    width: 6px;
+    height: 6px;
+    top: 2px;
+    right: 2px;
+  }
+  
+  .legend {
+    font-size: 11px;
+    gap: 15px;
+    padding: 8px 10px;
+  }
+  
+  .legend .dot {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+  }
+  
+  .booking-panel {
+    padding: 12px;
+  }
+}

@@ -20,3 +20,87 @@
 	.row .text.big h1{font-size:56px}
 	.about-us-ctn{padding:28px 6%}
 }
+
+/* ============== MOBILE STYLES ============== */
+@media screen and (max-width: 768px) {
+	.about-us-ctn {
+		margin-top: 70px;
+		padding: 25px 4%;
+		padding-bottom: 100px;
+	}
+	
+	.about-us-ctn .lead {
+		font-size: 15px;
+	}
+	
+	/* Stack rows vertically: h1 on top, image below */
+	.row {
+		flex-direction: column;
+		gap: 15px;
+		margin: 30px auto;
+	}
+	
+	/* Reverse order so text (h1) comes first */
+	.row .text {
+		order: 1;
+	}
+	
+	.row .media {
+		order: 2;
+		width: 100%;
+	}
+	
+	.row .media img {
+		height: 220px;
+		width: 100%;
+		object-fit: cover;
+	}
+	
+	.row .text.big h1 {
+		font-size: 42px;
+		text-align: center;
+	}
+	
+	.story {
+		margin: 30px auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.about-us-ctn {
+		margin-top: 60px;
+		padding: 20px 3%;
+		padding-bottom: 90px;
+	}
+	
+	.about-us-ctn .eyebrow {
+		letter-spacing: 3px;
+		font-size: 12px;
+	}
+	
+	.about-us-ctn .lead {
+		font-size: 14px;
+	}
+	
+	.row {
+		gap: 12px;
+		margin: 25px auto;
+	}
+	
+	.row .media img {
+		height: 180px;
+	}
+	
+	.row .text.big h1 {
+		font-size: 32px;
+		letter-spacing: 2px;
+	}
+	
+	.story h3 {
+		font-size: 16px;
+	}
+	
+	.story p {
+		font-size: 14px;
+	}
+}

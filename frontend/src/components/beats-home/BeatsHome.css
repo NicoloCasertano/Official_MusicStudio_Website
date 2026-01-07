@@ -42,3 +42,92 @@
 .thumbs{display:flex;gap:6px;justify-content:center}
 .thumb-img{width:40px;height:40px;object-fit:cover;border-radius:4px}
 .prod-text{margin-top:8px}
+
+/* ============== MOBILE STYLES ============== */
+@media screen and (max-width: 768px) {
+    .beats-section {
+        padding: 20px 15px 0 15px;
+        margin-top: 20px !important; /* Override inline -40vh margin */
+        margin-bottom: 40px;
+    }
+    
+    .beats-section h2 {
+        margin-bottom: 20px !important;
+        font-size: 20px;
+    }
+    
+    .slider {
+        gap: 8px;
+        flex-direction: column;
+    }
+    
+    .slides {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    
+    .slide-item {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+    
+    .arrow {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .arrow.left, .arrow.right {
+        display: none; /* Hide arrows on mobile, show all beats */
+    }
+    
+    .m-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15vh;
+    }
+    
+    .tshirt {
+        width: 180px;
+        margin: 0;
+    }
+    
+    .product-list {
+        gap: 12px;
+        margin-top: 20px;
+    }
+    
+    .product {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .beats-section {
+        padding: 15px 10px 0 10px;
+        margin-top: 15px !important;
+    }
+    
+    .beats-section h2 {
+        font-size: 18px;
+        margin-bottom: 15px !important;
+    }
+    
+    .slide-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .tshirt {
+        width: 150px;
+    }
+    
+    .product {
+        width: 140px;
+    }
+    
+    .caption {
+        font-size: 14px;
+    }
+}

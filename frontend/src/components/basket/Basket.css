@@ -89,4 +89,69 @@
   .payment-buttons{grid-template-columns:1fr}
   .checkout-actions{flex-direction:column}
   .checkout-btn, .btn.alt{width:100%}
+  
+  .basket {
+    padding: 20px 15px;
+    margin-top: 60px;
+    padding-bottom: 100px;
+  }
+  
+  .item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .item img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .i-mid {
+    flex: 1 1 100%;
+    order: 2;
+  }
+  
+  .i-right {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .summary {
+    font-size: 18px;
+  }
+  
+  .payment-section {
+    padding: 15px;
+  }
+  
+  .payment-btn {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  
+  .invoices {
+    padding: 15px;
+  }
+  
+  .invoice-card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .basket {
+    padding: 15px 10px;
+    margin-top: 55px;
+    padding-bottom: 90px;
+  }
+  
+  .item img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .summary {
+    font-size: 16px;
+    text-align: center;
+  }
 }

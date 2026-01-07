@@ -4,42 +4,29 @@ import { CartContext } from '../../context/CartContext'
 import { FaPlay, FaPause } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 
-// Import all cover images for dynamic selection
-import bCover1 from '../../assets/bCover_img1.jpg'
-import bCover2 from '../../assets/bCover_img2.jpg'
-import bCover3 from '../../assets/bCover_img3.jpg'
-import bCover4 from '../../assets/bCover_img4.jpg'
-import bCover5 from '../../assets/bCover_img5.jpg'
-import bCover6 from '../../assets/bCover_img6.jpg'
-import bCover7 from '../../assets/bCover_img7.jpg'
-import bCover8 from '../../assets/bCover_img8.jpg'
-import bCover9 from '../../assets/bCover_img9.jpg'
-import bCover10 from '../../assets/bCover_img10.jpg'
-import bCover11 from '../../assets/bCover_img11.jpg'
-import bCover12 from '../../assets/bCover_img12.jpg'
-import bCover13 from '../../assets/bCover_img13.jpg'
-import bCover14 from '../../assets/bCover_img14.jpg'
+// GitHub raw URL base for cover images
+const GITHUB_ASSETS_BASE = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/'
 
-// Map image filenames to imported assets
+// Map image filenames to GitHub URLs
 const coverImageMap = {
-  'bCover_img1.jpg': bCover1,
-  'bCover_img2.jpg': bCover2,
-  'bCover_img3.jpg': bCover3,
-  'bCover_img4.jpg': bCover4,
-  'bCover_img5.jpg': bCover5,
-  'bCover_img6.jpg': bCover6,
-  'bCover_img7.jpg': bCover7,
-  'bCover_img8.jpg': bCover8,
-  'bCover_img9.jpg': bCover9,
-  'bCover_img10.jpg': bCover10,
-  'bCover_img11.jpg': bCover11,
-  'bCover_img12.jpg': bCover12,
-  'bCover_img13.jpg': bCover13,
-  'bCover_img14.jpg': bCover14,
+  'bCover_img1.jpg': `${GITHUB_ASSETS_BASE}bCover_img1.jpg`,
+  'bCover_img2.jpg': `${GITHUB_ASSETS_BASE}bCover_img2.jpg`,
+  'bCover_img3.jpg': `${GITHUB_ASSETS_BASE}bCover_img3.jpg`,
+  'bCover_img4.jpg': `${GITHUB_ASSETS_BASE}bCover_img4.jpg`,
+  'bCover_img5.jpg': `${GITHUB_ASSETS_BASE}bCover_img5.jpg`,
+  'bCover_img6.jpg': `${GITHUB_ASSETS_BASE}bCover_img6.jpg`,
+  'bCover_img7.jpg': `${GITHUB_ASSETS_BASE}bCover_img7.jpg`,
+  'bCover_img8.jpg': `${GITHUB_ASSETS_BASE}bCover_img8.jpg`,
+  'bCover_img9.jpg': `${GITHUB_ASSETS_BASE}bCover_img9.jpg`,
+  'bCover_img10.jpg': `${GITHUB_ASSETS_BASE}bCover_img10.jpg`,
+  'bCover_img11.jpg': `${GITHUB_ASSETS_BASE}bCover_img11.jpg`,
+  'bCover_img12.jpg': `${GITHUB_ASSETS_BASE}bCover_img12.jpg`,
+  'bCover_img13.jpg': `${GITHUB_ASSETS_BASE}bCover_img13.jpg`,
+  'bCover_img14.jpg': `${GITHUB_ASSETS_BASE}bCover_img14.jpg`,
 }
 
 // Fallback image
-const defaultCoverImage = bCover1
+const defaultCoverImage = `${GITHUB_ASSETS_BASE}bCover_img1.jpg`
 
 // Global variable to track currently playing audio
 let currentlyPlayingAudio = null
