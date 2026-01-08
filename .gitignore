@@ -33,3 +33,4 @@ yarn-error.log*
 # Maven
 .mvn/wrapper/maven-wrapper.jar
 
+frontend/src/assets/*.mp4
