@@ -92,7 +92,7 @@ const SingleBeat = () => {
                         <h3>Exclusive Rights</h3>
                         <p><strong>This beat is sold with EXCLUSIVE RIGHTS.</strong></p>
                         <p>Once purchased, the beat will be removed from our store and you will own full exclusive rights.</p>
-                        <p>High-quality WAV file delivered instantly after purchase.</p><br /><br />
+                        <h6>High-quality WAV file delivered instantly after purchase.</h6><br /><br />
                     </div>
                 </div>
                 <div className='right'>

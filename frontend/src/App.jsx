@@ -17,10 +17,13 @@ import Register from './pages/Register'
 import Checkout from './pages/Checkout'
 import Testimonials from './components/testimonials/Testimonials';
 
+import video1 from './assets/video1.mp4';
+import video2 from './assets/video2.mp4';
+
 const slides = [
-	{name: '"Super"',video: '../assets/video1.mp4'},
-	{name: '"Gigios"',video: '../assets/video1.mp4'},
-	{name: '"sburosnki"',video: '../assets/video1.mp4'}
+	{name: '"Il miglior studio nel sud milano" cit. Gigione',video: video1},
+	{name: '"competenza, avventura musicale, ricerca, scoperta di sè, ho imparato molto" cit. Kafka',video: video2},
+	{name: '"Una scoperta che ormai ha 6 anni" cit. Giugioz',video: video1}
 ]
 
 const Home = () => {

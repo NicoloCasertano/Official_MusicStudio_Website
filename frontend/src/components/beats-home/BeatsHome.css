@@ -36,6 +36,7 @@
 .slides{display:flex;flex:1;gap:10px;overflow:hidden}
 .slide-item{flex:1}
 .arrow{background:#22222200;color:#fff;border:none;padding:12px 14px;cursor:pointer;border-radius:4px}
+.arrow:hover{background: rgba(255,255,255,0.2);border-radius: 50px;}
 .product-list{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:28px}
 .product{width:220px;background:transparent;color:#fff;text-align:center}
 .thumbs{display:flex;gap:6px;justify-content:center}

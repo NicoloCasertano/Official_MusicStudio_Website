@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Testimonials.css'
+import { FaPlay,FaPause } from 'react-icons/fa6';
 
 const Testimonials = ({slides}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,8 +21,7 @@ const Testimonials = ({slides}) => {
 
     return (
         <div className="tml-container">
-            <h1>What they say about us</h1>
-
+            <h1>THE MUSIC STUDIO YOU NEED</h1>
             <div className="slider">
                 <button onClick={prevSlide} className="nav-button prev-button">
                     &lt;
@@ -29,7 +29,7 @@ const Testimonials = ({slides}) => {
 
                 <div className="slide-content">
                     <h3>{currentSlide.name}</h3>
-                    <video src={currentSlide.video} controls />
+                    <video src={currentSlide.video} controls></video> 
                 </div>
 
                 <button onClick={nextSlide} className="nav-button next-button">

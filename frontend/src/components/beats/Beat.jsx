@@ -199,7 +199,7 @@ export default function Beat({ beat }) {
       <div className="beat-info">
         <h4>{beat.title}</h4>
         <span className="beat-genre" style={{ color: getBeatColor() }}>{beat.genre}</span>
-        <p className="price">€{beat.price}</p>
+        {/* <p className="price">€{beat.price}</p> */}
       </div>
 
       <audio 
