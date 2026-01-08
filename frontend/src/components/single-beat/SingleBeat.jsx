@@ -6,6 +6,7 @@ import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 import { getBeat } from '../../services/api'
 import api from '../../services/api'
+import img from '../../assets/img_tablet_singleBeat.jpg'
 
 // GitHub raw URL base for cover images
 const GITHUB_ASSETS_BASE = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/'
@@ -98,6 +99,9 @@ const SingleBeat = () => {
                     <img src={getCoverImage(beat.image)} alt={beat.title} />
                     <div className='price-tag'>€{beat.price.toFixed(2)}</div>
                 </div>
+            </div>
+            <div className='img-tablet-ctn'>
+                <img src={img} alt="" className='img-tablet'/>
             </div>
             <Footer />
         </div>

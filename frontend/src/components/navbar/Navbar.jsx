@@ -61,7 +61,7 @@ const Navbar = () => {
         )}
         
         {/* Desktop logo - not clickable */}
-        <img src={logoDesktop} alt="" className='img logo-desktop' style={{marginRight: '17.5vh'}}/>
+        {/* <img src={logoDesktop} alt="" className='img logo-desktop' style={{marginRight: '17.5vh'}}/> */}
         {/* Mobile logo - links to Home */}
         <Link to="/" className="logo-mobile-link">
           <img src={logoMobile} alt="" className='img logo-mobile'/>

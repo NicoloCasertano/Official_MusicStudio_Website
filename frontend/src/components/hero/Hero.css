@@ -16,8 +16,28 @@
 .hero-mobile {
     display: none;
 }
+.hero-mobile-h1 {
+        display: none;
+}
+.hero-mobile-h3{
+        display: none;
+}
+
 
 /* ============== MOBILE STYLES ============== */
+@media screen and (max-width: 1024px) {
+    .hero-desktop{
+        margin-top: -5vh;
+    }
+
+    .hero-mobile-h1 {
+        display: none;
+    }
+    .hero-mobile-h3{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     /* Mobile: hide desktop image, show mobile image */
     .hero-desktop {
@@ -34,6 +54,13 @@
         object-fit: cover;
         border-radius: 10px;
     }
+
+    .hero-mobile-h1 {
+        display: none;
+    }
+    .hero-mobile-h3{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -41,5 +68,29 @@
         margin-top: 55px;
         margin-bottom: 20px;
         max-height: 45vh;
+        width: 30%;
+        margin-left: 130px;
+    }
+    .hero-mobile-h1{
+        display: flex;
+        justify-content: center;
+        text-align: end;
+    }
+    .hero-mobile-h3{
+        color: white;
+        font-weight: lighter;
+        text-align: center;
+        margin-top: 0.50rem;
+        display: flex;
+    }
+
+    @keyframes typing {
+        from { width: 50% }
+        to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: white; }  
     }
 }
