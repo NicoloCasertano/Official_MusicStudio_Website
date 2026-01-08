@@ -22,7 +22,9 @@
 .hero-mobile-h3{
         display: none;
 }
-
+.slides-video{
+    margin-top: -12vh;
+}
 
 /* ============== MOBILE STYLES ============== */
 @media screen and (max-width: 1024px) {
@@ -59,6 +61,31 @@
         display: none;
     }
     .hero-mobile-h3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    /* Mobile: hide desktop image, show mobile image */
+    .hero-mobile {
+        display: none;
+    }
+    
+    .hero-desktop {
+        display: block;
+        margin-top: 60px; /* Account for fixed navbar height */
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 83vh;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .hero-mobile-h1 {
+        display: none;
+    }
+    .hero-mobile-h3 {
         display: none;
     }
 }

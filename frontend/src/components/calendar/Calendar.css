@@ -1,4 +1,4 @@
-.calendar-page{margin: 3vh;padding:40px;color:#fff}
+.calendar-page{margin: 1vh;padding:40px;color:#fff}
 .calendar-page .muted{color:#bbb;margin-bottom:18px}
 .days-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:10px;max-width:900px;margin:18px auto}
 .day{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;cursor:pointer;color:#fff}

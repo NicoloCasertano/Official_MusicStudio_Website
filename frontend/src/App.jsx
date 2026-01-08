@@ -15,12 +15,20 @@ import { CartProvider } from './context/CartContext';
 import AboutUs from './components/about-us/AboutUs'
 import Register from './pages/Register'
 import Checkout from './pages/Checkout'
+import Testimonials from './components/testimonials/Testimonials';
+
+const slides = [
+	{name: '"Super"',video: '../assets/video1.mp4'},
+	{name: '"Gigios"',video: '../assets/video1.mp4'},
+	{name: '"sburosnki"',video: '../assets/video1.mp4'}
+]
 
 const Home = () => {
 	return (
 		<div>
 			<Navbar />
 			<Hero />
+			<Testimonials slides={slides} className='slides-video'/>
 			<BeatsHome />
 			<Footer />
 			<AboutUs />
@@ -49,5 +57,6 @@ const App = () => {
 				</CartProvider>
 		)
 }
+
 
 export default App

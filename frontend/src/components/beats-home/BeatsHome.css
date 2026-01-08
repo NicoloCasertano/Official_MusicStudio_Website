@@ -103,6 +103,66 @@
     }
 }
 
+@media screen and (max-width: 740px) {
+    .beats-section {
+        padding: 20px 15px 0 15px;
+        margin-top: 20vh !important; /* Override inline -40vh margin */
+        margin-bottom: 40px;
+    }
+    
+    .beats-section h2 {
+        margin-bottom: 20px !important;
+        font-size: 20px;
+    }
+    
+    .slider {
+        gap: 8px;
+        flex-direction: column;
+    }
+    
+    .slides {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    
+    .slide-item {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+        margin-bottom: -9rem;
+    }
+    
+    .arrow {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .arrow.left, .arrow.right {
+        display: none; /* Hide arrows on mobile, show all beats */
+    }
+    
+    .m-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15vh;
+    }
+    
+    .tshirt {
+        width: 180px;
+        margin: 0;
+    }
+    
+    .product-list {
+        gap: 12px;
+        margin-top: 20px;
+    }
+    
+    .product {
+        width: 160px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .beats-section {
         padding: 20px 15px 0 15px;

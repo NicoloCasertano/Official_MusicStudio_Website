@@ -1,4 +1,4 @@
-.beatspage-container{margin-top: 12vh;padding:40px;text-align:center;color:#fff}
+.beatspage-container{margin-top: 0vh;padding:40px;text-align:center;color:#fff}
 .intro{max-width:800px;margin:8px auto 24px}
 
 .beats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;max-width:1100px;margin:18px auto}

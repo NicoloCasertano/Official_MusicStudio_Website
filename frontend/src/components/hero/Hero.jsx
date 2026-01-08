@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import Testimonials from '../testimonials/Testimonials'
 
 const heroImgDesktop = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/IMG_0424.PNG'
 const heroImgMobile = 'https://raw.githubusercontent.com/NicoloCasertano/Official_MusicStudio_Website/main/frontend/src/assets/IMG_0423.PNG'
