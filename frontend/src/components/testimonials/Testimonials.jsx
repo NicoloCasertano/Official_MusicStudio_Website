@@ -5,31 +5,40 @@ import { FaPlay,FaPause } from 'react-icons/fa6';
 const Testimonials = ({slides}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const prevIndex =
+        (currentIndex - 1 + slides.length) % slides.length;
+    const nextIndex =
+        (currentIndex + 1) % slides.length;
+
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+        setCurrentIndex((i) => (i + 1) % slides.length);
     }
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+        setCurrentIndex((i) => (i - 1 + slides.length) % slides.length);
     }
-
-    // useEffect(() => {
-    //     const timer = setInterval(nextSlide, 3000)
-    //     return () => clearInterval(timer)
-    // }, [slides.length])
-
-    const currentSlide = slides[currentIndex];
 
     return (
         <div className="tml-container">
             <h1>THE MUSIC STUDIO YOU NEED</h1>
+
             <div className="slider">
                 <button onClick={prevSlide} className="nav-button prev-button">
                     &lt;
                 </button>
 
-                <div className="slide-content">
-                    <h3>{currentSlide.name}</h3>
-                    <video src={currentSlide.video} controls></video> 
+                <div className="slide slide-prev">
+                    <h3>{slides[prevIndex].name}</h3>
+                    <video src={slides[prevIndex].video}></video> 
+                </div>
+
+                <div className="slide slide-current">
+                    <h3>{slides[currentIndex].name}</h3>
+                    <video src={slides[currentIndex].video} controls></video> 
+                </div>
+
+                <div className="slide slide-next">
+                    <h3>{slides[nextIndex].name}</h3>
+                    <video src={slides[nextIndex].video}></video> 
                 </div>
 
                 <button onClick={nextSlide} className="nav-button next-button">
@@ -39,7 +48,5 @@ const Testimonials = ({slides}) => {
         </div>
     );
 };
-
-
 
 export default Testimonials

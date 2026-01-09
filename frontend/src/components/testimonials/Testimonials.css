@@ -1,10 +1,10 @@
 h1{
     margin-top: -1rem;
+    margin-bottom: 1rem;
     color:white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8vh;
     white-space: nowrap;
 }
 .slider {
@@ -12,27 +12,54 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 400px;
+    overflow: hidden;
 }
-.slide-content {
+.slide {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 45vh;
+    transition: 
+        transform 0.5s ease,
+        opacity 0.5s ease,
+        scale 0.5s ease;
+}
+
+/* Current slide (center) */
+.slide-current {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+/* Previous slide (left) */
+.slide-prev {
+    transform: translateX(-180px) scale(0.7);
+    opacity: 0.25;
+    z-index: 2;
+}
+
+/* Next slide (right) */
+.slide-next {
+    transform: translateX(180px) scale(0.7);
+    opacity: 0.25;
+    z-index: 2;
 }
 h3{
-    margin-top: -1rem;
     color: white;
     font-weight: lighter;
     margin-bottom: 1rem;   
     text-align: center;
 }
 video{
-    width: 45%;
+    width:40%;
     max-width: 100%;
+    border-radius: 8px;
 }
 .nav-button {
     position: absolute;
-    top: 25%;
+    top: 50%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.4);
     color: white;
@@ -46,21 +73,15 @@ video{
     background: rgba(255,255,255,0.2);
 }
 .prev-button {
-    left: -50px;
+    left: 6rem;
 }
 .next-button {
-    right: -50px;
+    right: 6rem;
 }
 .tml-container{
-    width: 40%;
+    width: 100%;
     gap:12px;
     max-width:1200px;
     margin:0 auto;
     margin-top: -40vh;
 }   
-.img{
-    height: 100%;
-    width: 100%;
-    opacity: 30%;
-}
-

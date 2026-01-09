@@ -1,8 +1,8 @@
 /* About Us page styles */
-.about-us-ctn{margin-top:12vh;padding:40px 4%;color:#fff}
-.about-us-ctn .hero{max-width:900px;margin:0 auto 30px;text-align:center}
-.about-us-ctn .eyebrow{letter-spacing:6px;color:#ddd;margin-bottom:8px}
-.about-us-ctn .lead{color:#ccc;font-size:18px;line-height:1.6;max-width:760px;margin:0 auto}
+.about-us-ctn{margin-top:0vh;padding:40px 4%;color:#fff}
+.about-us-ctn .hero{max-width:900px;margin:0 auto 30px;text-align:center;margin-top:-3rem}
+.about-us-ctn .eyebrow{color:#ddd;margin-bottom:8px;font-weight: normal;}
+.about-us-ctn .lead{color:#ccc;font-size:18px;line-height:1.6;max-width:760px;margin:0 auto;font-weight: lighter;}
 
 .row{display:flex;align-items:center;gap:30px;max-width:1100px;margin:36px auto}
 .row.reverse{flex-direction:row-reverse}
@@ -12,8 +12,8 @@
 .row .text{flex:1;display:flex;align-items:center;justify-content:center}
 .row .text.big h1{font-size:84px;line-height:0.9;margin:0;letter-spacing:4px}
 
-.story{max-width:900px;margin:40px auto;color:#ddd}
-.story h3{color:#fff;margin-bottom:8px}
+.story{max-width:900px;margin:40px auto;color:#ddd; margin-top: 2rem;font-weight: lighter;text-align: center;}
+.story h3{color:#fff;margin-bottom:8px;font-weight: normal;}
 
 @media(max-width:900px){
 	.row{flex-direction:row}

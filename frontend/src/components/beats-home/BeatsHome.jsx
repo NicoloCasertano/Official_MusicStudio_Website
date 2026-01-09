@@ -15,8 +15,11 @@ const BeatsHome = () => {
     }, [])
 
     return (
-        <div className='beats-section' style={{marginTop: '-40vh'}}>
-            <h2 style={{textAlign:'center',color:'#fff', marginBottom: '6vh'}}>Beats Section</h2>
+        <div className='beats-section'>
+            <h2 style={{textAlign:'center',color:'#fff', marginBottom: '-8vh', marginTop: '12vh'}}>BEATS ON SALE</h2>
+            <h6 style={{textAlign:'center',color:'#fff', marginBottom: '-8vh', marginTop: '10vh', fontWeight: 'lighter'}}>
+                Create an account or log in if you want to purchase, then you can also book a session in the Calendar page, feel free to Contact Us 
+            </h6>
             {beats.length === 0 ? (
                 <p style={{textAlign:'center', color:'#fff', fontSize:'18px', padding:'40px'}}>
                     No beats yet...

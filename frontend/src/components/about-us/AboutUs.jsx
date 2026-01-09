@@ -9,11 +9,12 @@ const imgAlt = 'https://raw.githubusercontent.com/NicoloCasertano/Official_Music
 const AboutUs = () => {
   return (
     <div>
-      <Navbar />
       <main className='about-us-ctn container'>
         <section className='hero'>
           <h2 className='eyebrow'>About</h2>
-          <p className='lead'>NoSaintz is a creative collective blending music, visual art and street culture — we make records, shows and merch that speak to the midnight crowd.</p>
+          <p className='lead'>NoSaintz is a Producer Duo born in the south side of Milan and it's an active project since 2019. 
+            The "Cripta" studio is not just a recording/mix and master room, is a place where your ideas and your persona take place, to create a professional project. 
+            Is not just a studio, it's a home... and you're welcome</p>
         </section>
 
         <section className='row'>
@@ -45,10 +46,9 @@ const AboutUs = () => {
 
         <section className='story'>
           <h3>Our Work</h3>
-          <p>We produce records, design apparel and stage live events with an emphasis on authenticity and craft. Our studio 'La Cripta' hosts rehearsals and recording sessions. We collaborate with visual artists and local brands to create limited-run pieces — all made with care.</p>
+          <p>We care about all the stages of prod, from writing to record, to the final mix and master process. Contact us or book a session in the Calendar page. Don't forget to see out social</p>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }
