@@ -14,7 +14,33 @@
 
 .story{max-width:900px;margin:40px auto;color:#ddd; margin-top: 2rem;font-weight: lighter;text-align: center;}
 .story h3{color:#fff;margin-bottom:8px;font-weight: normal;}
-
+.pt-iva{
+    font-size: 1.2vh;
+    font-weight: lighter;   
+	list-style: none;
+	margin: 0 3rem;
+	display: inline-block;
+}
+.pt-iva-ctn{
+    width: 100%;
+    height: 100px;
+    text-overflow: nowrap;
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	text-align:center;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top:18px;
+}
+@media(max-width:1024px){
+	.row{flex-direction:row}
+	.row .media img{height:220px}
+	.row .text.big h1{font-size:56px}
+	.about-us-ctn{padding:28px 6%;}
+}
 @media(max-width:900px){
 	.row{flex-direction:row}
 	.row .media img{height:220px}

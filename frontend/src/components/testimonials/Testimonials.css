@@ -85,3 +85,46 @@ video{
     margin:0 auto;
     margin-top: -40vh;
 }   
+
+
+@media screen and (max-width: 480px) {
+    .tml-container{
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .tml-container{
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    video {
+        width: 45%;
+    }
+
+    .slide-prev {
+        transform: translateX(-160px) scale(0.7);
+    }
+
+    .slide-next {
+        transform: translateX(160px) scale(0.7);
+    }
+
+    .prev-button {
+        left: 4rem;
+    }
+
+    .next-button {
+        right: 4rem;
+    }
+    
+    .tml-container{
+        margin-top: -12rem;
+    }
+}

@@ -9,7 +9,7 @@ footer ul {
 }
 
 footer.has-user ul {
-    margin-right: 20%;
+    margin-right: 0%;
 }
 
 footer ul li{
@@ -19,6 +19,7 @@ footer ul li{
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
+    width: auto;
 }
 
 footer ul li a {
@@ -106,6 +107,7 @@ footer{
     color: rgb(253, 37, 37);
     transition-duration: 0.2s;
 }
+
 
 /* ============== MOBILE STYLES ============== */
 @media screen and (max-width: 768px) {

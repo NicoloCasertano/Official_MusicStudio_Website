@@ -19,10 +19,13 @@ import Testimonials from './components/testimonials/Testimonials';
 
 import video1 from './assets/video1.mp4';
 import video2 from './assets/video2.mp4';
+import CookiePolicy from './components/cookie-policy/CookiePolicy';
+import PrivacyPolicy from './components/privacy-policy/PrivacyPolicy';
 
 const name1 = "Com'è stata la tua esperienza?";
 const name2 = "Com'è nata la vostra collab?";
 const name3 = "Come hai scoperto i NoSaintz?";
+
 const slides = [
 	{name: name1, video: video1},
 	{name: name2, video: video1},
@@ -36,8 +39,8 @@ const Home = () => {
 			<Hero />
 			<Testimonials slides={slides} className='slides-video'/>
 			<BeatsHome />
-			<Footer />
 			<AboutUs />
+			<Footer />
 		</div>
 	)
 }
@@ -57,6 +60,8 @@ const App = () => {
 								<Route path='/calendar' element={<CalendarPage />} />
 								<Route path='/register' element={<Register />} />
 								<Route path='/checkout' element={<Checkout />} />
+								<Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
+								<Route path='/cookies-policy' element={<CookiePolicy/>}/>
 							</Routes>
 						</Router>
 					</MenuProvider>

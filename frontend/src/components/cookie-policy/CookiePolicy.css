@@ -1,0 +1,29 @@
+.cookie-container{
+    color: white;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section{
+    width: 70%;   
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+h1{
+    text-align: center;
+}
+h3{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+h4{
+    margin-top: 5rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+h6{
+    font-weight: lighter;
+}
