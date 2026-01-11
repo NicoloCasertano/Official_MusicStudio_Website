@@ -15,7 +15,7 @@ h1{
     text-align: center;
 }
 h3{
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     font-weight: normal;
 }
@@ -26,4 +26,12 @@ h4{
 }
 h6{
     font-weight: lighter;
+    font-size: 2vh;
+}
+.icn{
+    margin-right: 1vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    display: flex;
 }

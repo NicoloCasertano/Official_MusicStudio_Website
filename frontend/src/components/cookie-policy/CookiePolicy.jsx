@@ -1,8 +1,9 @@
 import React from 'react'
 import './CookiePolicy.css';
-import { FaBook, FaList, FaSlidersH, FaUser } from 'react-icons/fa'
+import { FaBook, FaList, FaSlidersH, FaTools, FaUser } from 'react-icons/fa'
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
+import { Fa42Group } from 'react-icons/fa6';
 
 const CookiePolicy = () => {
   return (
@@ -25,7 +26,7 @@ const CookiePolicy = () => {
             </div>
             
             <div className='section'>
-                <h1><FaUser/> Owner and Data Controller</h1>
+                <h1><FaUser className='icn'/> Owner and Data Controller</h1>
                 <h3>NoSaintz Studio - Via Galileo Galilei, 10, Civesio / S. Giuliano Milanese, 20098, (MI)
 
                     Owner contact email: nicolo.casertano@gmail.com
@@ -33,32 +34,32 @@ const CookiePolicy = () => {
             </div>
 
             <div className='section'>
-                <h1><FaList/> How this Application uses Trackers</h1>
+                <h1><FaTools className='icn'/>How this Application uses Trackers</h1>
                 <h3>Necessary</h3>
                 <h6>This Application uses so-called “technical” Cookies and other similar Trackers to carry out activities that are strictly necessary for the operation or delivery of the Service.</h6>     
             </div>
 
             <div className='section'>
-                <h1><FaSlidersH/> How to manage preferences and provide or <br />
-                        withdraw consent on this Application</h1>
+                <h1><FaSlidersH className='icn'/> How to manage preferencesand <br />provide or
+                        withdraw consent <br />on this Application</h1>
                 <h6>Whenever the use of Trackers is based on consent, users can provide or withdraw such consent by setting or updating their preferences via the relevant privacy choices panel available on this Application.</h6>
                 <h3>How to control or delete Cookies and similar technologies via your device settings</h3>
                 <h6>Users may use their own browser settings to:
-
+                    <br /><br />
                     See what Cookies or other similar technologies have been set on the device;
                     Block Cookies or similar technologies;
                     Clear Cookies or similar technologies from the browser.
                     The browser settings, however, do not allow granular control of consent by category.
+                    <br /><br />
+                    Users can, for example, find information about how to manage Cookies in the most commonly used browsers at the following addresses:  <br /><br />
 
-                    Users can, for example, find information about how to manage Cookies in the most commonly used browsers at the following addresses:
-
-                    <a href="https://support.google.com/chrome/answer/95647?hl=en&p=cpn_cookies" target='_blank'>Google Chrome</a>
-                    <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US" target='_blank'>Mozilla Firefox</a>
-                    <a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target='_blank'>Apple Safari</a>
-                    <a href="https://support.microsoft.com/it-it/windows/gestire-i-cookie-in-microsoft-edge-visualizzare-consentire-bloccare-eliminare-e-usare-168dab11-0753-043d-7c16-ede5947fc64d" target='_blank'>Microsoft Internet Explorer</a>
-                    <a href="https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d" target='_blank'>Microsoft Edge</a>
-                    <a href="https://support.brave.app/hc/en-us/articles/360022806212-How-do-I-use-Shields-while-browsing" target='_blank'>Brave</a>
-                    <a href="https://help.opera.com/en/latest/web-preferences/#cookies" target='_blank'>Opera</a>
+                    <a href="https://support.google.com/chrome/answer/95647?hl=en&p=cpn_cookies" target='_blank'>Google Chrome</a><br /><br />
+                    <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US" target='_blank'>Mozilla Firefox</a><br /><br />
+                    <a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target='_blank'>Apple Safari</a><br /><br />
+                    <a href="https://support.microsoft.com/it-it/windows/gestire-i-cookie-in-microsoft-edge-visualizzare-consentire-bloccare-eliminare-e-usare-168dab11-0753-043d-7c16-ede5947fc64d" target='_blank'>Microsoft Internet Explorer</a><br /><br />
+                    <a href="https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d" target='_blank'>Microsoft Edge</a><br /><br />
+                    <a href="https://support.brave.app/hc/en-us/articles/360022806212-How-do-I-use-Shields-while-browsing" target='_blank'>Brave</a><br /><br />
+                    <a href="https://help.opera.com/en/latest/web-preferences/#cookies" target='_blank'>Opera</a><br /><br />
 
                     Users may also manage certain categories of Trackers used on mobile apps by opting out through relevant device settings such as the device advertising settings for mobile devices, or tracking settings in general (Users may open the device settings and look for the relevant setting).
                 </h6>
@@ -67,7 +68,7 @@ const CookiePolicy = () => {
             </div>
 
             <div className='section'>
-                <h1><FaBook/> Definitions and legal references</h1>
+                <h1><FaBook className='icn'/> Definitions and legal references</h1>
                 <h3>Personal Data (or Data)</h3>
                 <h6>Any information that directly, indirectly, or in connection with other information — including a personal identification number — allows for the identification or identifiability of a natural person.</h6>
                 <h3>Usage Data</h3>

@@ -52,16 +52,19 @@ const AboutUs = () => {
           <h3>Our Work</h3>
           <p>We care about all the stages of prod, from writing to record, to the final mix and master process. Contact us or book a session in the Calendar page. Don't forget to see out social</p>
         </section>
+        <div className='top-line'></div>
         <div className='pt-iva-ctn'>
           <ul>
-            <li className='pt-iva'>Via Galileo Galilei, 10, Civesio, San Giuliano Milanese (MI), 20098</li>
+            <li className='pt-iva'>Via Galileo Galilei, 10, Civesio, San Giuliano Milanese (MI), 20098</li><br />
             <li className='pt-iva'>info.nosaintz@gmail.com - cell. 3299760718 - cell. 3334682515</li>
           </ul>
-            <li class="pt-iva" title="Privacy Policy " style={{textDecoration:'none'}}><Link to='/privacy-policy'>Privacy Policy</Link></li>
-            <li class="pt-iva" title="Cookie Policy " style={{textDecoration:'none'}}><Link to='/cookies-policy'>Cookie Policy</Link></li>
           <ul>
-            <li className='pt-iva'>Andre Bon - Producer, Sound Engineer, Sound Designer - PT. IVA - 77788880777</li>
-            <li className='pt-iva'>Nicolò Casertano - Producer, Musicista, Arrangiatore, Compositore - PT. IVA - 14482220960</li>
+            <li className="pt-iva-c" title="Privacy Policy " ><Link to='/privacy-policy' style={{textDecoration:'none'}}>Privacy Policy</Link></li><br />
+            <li className="pt-iva-c" title="Cookie Policy " ><Link to='/cookies-policy' style={{textDecoration:'none'}}>Cookie Policy</Link></li>
+          </ul>
+          <ul>
+            <li className='pt-iva-n'>Nicolò Casertano - Producer, Composer - PT. IVA - 14482220960</li><br />
+            <li className='pt-iva-n'>Andre Bon - Producer, Sound Engineer - PT. IVA - 77788880777</li>
           </ul>
         </div>
       </main>

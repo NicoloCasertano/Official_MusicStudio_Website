@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
-import { FaBasketShopping, FaBars, FaCalendarDays, FaUser } from 'react-icons/fa6'
+import { FaBasketShopping, FaBars, FaCalendarDays, FaUser, FaInstagram } from 'react-icons/fa6'
 import { MenuContext } from '../../context/MenuContext'
 import { useCart } from '../../context/CartContext'
 
@@ -67,10 +67,11 @@ const Navbar = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/calendar">Calendar</Link></li>
           <li><Link to="/beats">Beats</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
+          {/* <li><Link to="/gallery">Gallery</Link></li> */}
+          <li><a href="https://www.instagram.com/youneednosaintz/" target='_blank'><FaInstagram className='ig-icn'></FaInstagram></a></li>
           <li className="calendar-link">
             <Link to="/calendar">
-              <FaCalendarDays />
+              <FaCalendarDays/>
             </Link>
           </li>
           <li className="basket-link">

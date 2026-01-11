@@ -1,6 +1,6 @@
 /* About Us page styles */
-.about-us-ctn{margin-top:0vh;padding:40px 4%;color:#fff}
-.about-us-ctn .hero{max-width:900px;margin:0 auto 30px;text-align:center;margin-top:-3rem}
+.about-us-ctn{margin-top:5rem;padding:40px 4%;color:#fff;}
+.about-us-ctn .hero{max-width:900px;margin:0 auto 30px;text-align:center;margin-top:-3rem;}
 .about-us-ctn .eyebrow{color:#ddd;margin-bottom:8px;font-weight: normal;}
 .about-us-ctn .lead{color:#ccc;font-size:18px;line-height:1.6;max-width:760px;margin:0 auto;font-weight: lighter;}
 
@@ -12,29 +12,43 @@
 .row .text{flex:1;display:flex;align-items:center;justify-content:center}
 .row .text.big h1{font-size:84px;line-height:0.9;margin:0;letter-spacing:4px}
 
-.story{max-width:900px;margin:40px auto;color:#ddd; margin-top: 2rem;font-weight: lighter;text-align: center;}
+.story{max-width:900px;margin:40px auto;color:#ddd; margin-top: 2rem;font-weight: lighter;text-align: center;margin-bottom: 2.5rem;}
 .story h3{color:#fff;margin-bottom:8px;font-weight: normal;}
-.pt-iva{
-    font-size: 1.2vh;
-    font-weight: lighter;   
-	list-style: none;
-	margin: 0 3rem;
-	display: inline-block;
-}
+.top-line{height: 0.5px; background-color: #fff; width: 100%;margin-bottom: 9px; margin-bottom: 2.5rem;}
 .pt-iva-ctn{
     width: 100%;
-    height: 100px;
-    text-overflow: nowrap;
-	display: flex;
+    max-width: 1400px;        
+    height: 3.5rem;
+	
+    display: flex;
     align-items: center;
-	justify-content: center;
-	text-align:center;
-    margin: 0;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-	margin-top:18px;
+    justify-content: space-between;
+
+    margin: 0 auto;   
+	margin-bottom: 1.3rem;       
+    padding: 0 3rem;
 }
+.pt-iva-ctn ul {
+    flex: 1;                 
+    padding: 0;
+    margin: 0;
+	font-size: 1.5vh;
+    font-weight: lighter;   
+	list-style: none;
+}
+.pt-iva-ctn ul:first-child {
+    text-align: left;
+    align-items: flex-start;
+}
+.pt-iva-ctn ul:nth-child(2) {
+    text-align: center;
+    align-items: center;
+}
+.pt-iva-ctn ul:last-child {
+    text-align: right;
+    align-items: flex-end;
+}
+
 @media(max-width:1024px){
 	.row{flex-direction:row}
 	.row .media img{height:220px}

@@ -35,21 +35,20 @@ h1{
 
 /* Previous slide (left) */
 .slide-prev {
-    transform: translateX(-180px) scale(0.7);
-    opacity: 0.25;
+    transform: translateX(-180px) scale(0.6);
+    opacity: 0.45;
     z-index: 2;
 }
 
 /* Next slide (right) */
 .slide-next {
-    transform: translateX(180px) scale(0.7);
-    opacity: 0.25;
+    transform: translateX(180px) scale(0.6);
+    opacity: 0.45;
     z-index: 2;
 }
 h3{
     color: white;
     font-weight: lighter;
-    margin-bottom: 1rem;   
     text-align: center;
 }
 video{

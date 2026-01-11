@@ -24,6 +24,7 @@ const BeatsHome = () => {
                 <p style={{textAlign:'center', color:'#fff', fontSize:'18px', padding:'40px'}}>
                     No beats yet...
                 </p>
+                
             ) : (
                 <div className='slider'>
                     {beats.length > 1 && <button className='arrow left' onClick={() => setStart((s) => (s - 1 + beats.length) % beats.length)}>&lt;</button>}
@@ -40,6 +41,7 @@ const BeatsHome = () => {
                     {beats.length > 1 && <button className='arrow right' onClick={() => setStart((s) => (s + 1) % beats.length)}>&gt;</button>}
                 </div>
             )}
+            <div className='top-line'></div>
         </div>
     )
 }

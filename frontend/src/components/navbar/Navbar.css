@@ -52,6 +52,15 @@ nav ul li:hover{
     text-shadow: 0 0 2px #ffffff;
     transition: 0.2s;
 }
+.ig-icn{
+    width: 20px;
+    height: 20px;
+}
+.ig-icn:hover{
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #f5b429;
+}
 
 /* Hide calendar icon on desktop - it's a text link */
 nav ul li.calendar-link {

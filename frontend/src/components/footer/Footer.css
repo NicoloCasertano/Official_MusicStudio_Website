@@ -91,21 +91,29 @@ footer{
     background-color: rgba(255, 255, 255, 0.764);
     transform: scale(1.05);
 }
-.icn-s:hover {
+.icn-s:hover{
     color: rgb(103, 210, 82);
+    box-shadow: 0 0 5px rgb(103, 210, 82);
     transition-duration: 0.2s;
+    border-radius: 8px;
 }
 .icn-i:hover {
-    color: #e534ad;
+    color: #7090d6;
     transition-duration: 0.2s;
+    box-shadow: 0 0 5px #aec4f5;
+    border-radius: 8px;
 }
 .icn-w:hover {
     color: rgb(140, 243, 119);
     transition-duration: 0.2s;
+    box-shadow: 0 0 20px rgb(140, 243, 119);
+    border-radius: 6px;
 }
 .icn-m:hover {
-    color: rgb(253, 37, 37);
+    color: rgb(255, 73, 73);
     transition-duration: 0.2s;
+    box-shadow: 0 0 5px rgb(255, 73, 73);
+    border-radius: 2px;
 }
 
 
